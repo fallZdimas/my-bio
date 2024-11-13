@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Bertingkat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            position: relative;
+        }
+
+        .content {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: none; /* Semua lapisan tersembunyi secara default */
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 32px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            font-size: 14px;
+            color: #888;
+        }
+
+        .signature {
+            font-style: italic;
+            font-weight: bold;
+            color: rgb(255, 0, 255);
+        }
+    </style>
+</head>
+<body>
+    <!-- Lapisan pertama -->
+    <div id="layer1" class="content" style="display: block;">
+        <h1>Pertama-tama kamu asu!</h1>
+        <button onclick="goToNextLayer(2)">Lanjut ke Lapisan 2</button>
+    </div>
+
+    <!-- Lapisan kedua -->
+    <div id="layer2" class="content">
+        <h1>Kedua lu jawa tolol</h1>
+        <button onclick="goToNextLayer(3)">Lanjut ke Lapisan 3</button>
+    </div>
+
+    <!-- Lapisan ketiga -->
+    <div id="layer3" class="content">
+        <h1>Yang ketiga lu ngapak bego</h1>
+        <button onclick="goToNextLayer(4)">Lanjut ke Lapisan 4</button>
+    </div>
+
+    <!-- Lapisan keempat -->
+    <div id="layer4" class="content">
+        <h1>Lu kaya celeng</h1>
+        <button onclick="goToNextLayer(5)">Lanjut ke Lapisan 5</button>
+    </div>
+
+    <!-- Lapisan kelima -->
+    <div id="layer5" class="content">
+        <h1>Utang bayar bego</h1>
+        <button onclick="goToNextLayer(6)">Lanjut ke Lapisan 6</button>
+    </div>
+
+    <!-- Lapisan keenam -->
+    <div id="layer6" class="content">
+        <h1>Lu rasis</h1>
+        <button onclick="goToNextLayer(7)">Lanjut ke Lapisan 7</button>
+    </div>
+
+    <!-- Lapisan ketujuh -->
+    <div id="layer7" class="content">
+        <h1>Lu item</h1>
+        <button onclick="goToNextLayer(8)">Lanjut ke Lapisan 8</button>
+    </div>
+
+    <!-- Lapisan kedelapan -->
+    <div id="layer8" class="content">
+        <h1>Lu pemakan sagu</h1>
+        <button onclick="goToNextLayer(9)">Lanjut ke Lapisan 9</button>
+    </div>
+
+    <!-- Lapisan kesembilan -->
+    <div id="layer9" class="content">
+        <h1>Lu kalo ga ada motor naik anjing aja naik anjing</h1>
+        <button onclick="goToNextLayer(10)">Lanjut ke Lapisan 10</button>
+    </div>
+
+    <!-- Lapisan kesepuluh -->
+    <div id="layer10" class="content">
+        <h1>Cape gw bikin satt</h1>
+        <p>Terima kasih telah menjelajahi 10 lapisan.</p>
+    </div>
+
+    <div class="footer">
+        <p>Desain ini dibuat oleh <span class="signature">Pipin</span></p>
+    </div>
+
+    <script>
+        function goToNextLayer(layer) {
+            // Menyembunyikan lapisan sebelumnya
+            document.getElementById(`layer${layer - 1}`).style.display = 'none';
+            
+            // Menampilkan lapisan berikutnya
+            const nextLayer = document.getElementById(`layer${layer}`);
+            nextLayer.style.display = 'block';
+        }
+    </script>
+
+</body></html>
